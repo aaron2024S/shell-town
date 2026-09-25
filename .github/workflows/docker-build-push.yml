@@ -11,8 +11,11 @@
 #     DOCKERHUB_TOKEN    = Docker Hub 访问令牌（不是登录密码）
 #   必须建在 Secrets 分页，建在旁边的 Variables 分页等于没建。
 #
-# 这个项目构建较慢：better-sqlite3 是 native 模块，镜像里要用 g++ 现场编译，
-# 加上 arm64 靠 QEMU 模拟，第一次跑通常要十几分钟，属正常。
+# 这个项目构建较慢：better-sqlite3 是 native 模块，alpine(musl)+arm64 没有现成预编译包，
+# 必须在容器里用 g++ 现场编译整个 SQLite 源码（约 25 万行 C）；
+# 再叠加 arm64 的 QEMU 软件模拟（编译速度约原生的 1/5~1/10）和首次无缓存，
+# 第一次双架构预计 30~45 分钟，属正常。跑完会留下 GitHub 缓存，之后会明显变快。
+# 想快：不确定 NAS 架构就留着；确定是 x86 就删掉 QEMU 这一步 + platforms 只留 linux/amd64。
 # ============================================================================
 name: docker-build-push
 
