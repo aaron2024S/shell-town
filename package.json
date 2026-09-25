@@ -3,6 +3,7 @@
   "version": "1.7.0",
   "private": true,
   "description": "拾贝小镇 (Shell Town) - 家庭积分与宠物养成系统",
+  "license": "MIT",
   "workspaces": [
     "server",
     "web"

@@ -2,6 +2,7 @@
   "name": "@shell-town/web",
   "version": "1.7.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
