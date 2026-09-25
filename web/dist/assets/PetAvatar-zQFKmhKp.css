@@ -1,0 +1,27 @@
+
+.pet-avatar[data-v-edb9b0f7] {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.pet-img[data-v-edb9b0f7] {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.pet-fallback[data-v-edb9b0f7] {
+  font-size: 2.2em;
+  line-height: 1;
+}
+.pet-avatar.ring[data-v-edb9b0f7]::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--pet-ring, #7ed4b9) 0%, transparent 70%);
+  opacity: 0.22;
+  pointer-events: none;
+}

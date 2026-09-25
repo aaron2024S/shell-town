@@ -1,0 +1,94 @@
+
+.page-header[data-v-0df48d0b] {
+  margin-bottom: 16px;
+}
+.title[data-v-0df48d0b] { font-size: 26px; margin-bottom: 2px;
+}
+.subtitle[data-v-0df48d0b] { color: var(--text-secondary); font-size: 13px;
+}
+.task-list[data-v-0df48d0b] { display: flex; flex-direction: column; gap: 12px;
+}
+.task-card[data-v-0df48d0b] {
+  transition: transform 0.15s;
+}
+.head[data-v-0df48d0b] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.status[data-v-0df48d0b] {
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.status.active[data-v-0df48d0b] { background: rgba(126, 212, 185, 0.2); color: var(--accent-mint);
+}
+.status.review[data-v-0df48d0b] { background: rgba(255, 209, 102, 0.2); color: var(--accent-yellow);
+}
+.status.completed[data-v-0df48d0b] { background: rgba(126, 212, 185, 0.3); color: var(--accent-mint);
+}
+.status.expired[data-v-0df48d0b] { background: rgba(255, 122, 122, 0.2); color: var(--accent-red);
+}
+.reward[data-v-0df48d0b] {
+  font-family: var(--font-cute);
+  color: var(--accent-yellow);
+  font-size: 22px;
+}
+.name[data-v-0df48d0b] {
+  font-size: 18px;
+  margin-bottom: 4px;
+  font-family: var(--font-cute);
+}
+.desc[data-v-0df48d0b] {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.meta[data-v-0df48d0b] {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.rejected-box[data-v-0df48d0b] {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--accent-red);
+  background: rgba(255, 122, 122, 0.1);
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  margin-bottom: 12px;
+}
+.actions[data-v-0df48d0b] {
+  display: flex;
+  gap: 8px;
+}
+.big[data-v-0df48d0b] {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  font-family: var(--font-cute);
+}
+.hint[data-v-0df48d0b] {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--glass-bg);
+  border-radius: var(--r-sm);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.hint.done[data-v-0df48d0b] {
+  color: var(--accent-mint);
+  background: rgba(126, 212, 185, 0.1);
+}
+.hint .emoji[data-v-0df48d0b] { font-size: 18px;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@shell-town/server",
+  "version": "1.7.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json && node scripts/copy-assets.mjs",
+    "start": "node dist/index.js",
+    "test:migration": "tsx scripts/migration-regression.ts",
+    "test:expiry": "node scripts/expiry-regression.mjs",
+    "test:list": "node scripts/list-regression.mjs",
+    "diagnose:list-plan": "node scripts/list-plan-check.mjs"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.5.0",
+    "@fastify/static": "^6.2.1",
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.5.0",
+    "fastify": "^4.28.1",
+    "jose": "^5.9.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

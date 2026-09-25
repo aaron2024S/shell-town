@@ -1,0 +1,27 @@
+# Shell Town（拾贝小镇）— 2026-09-15 由 piggy-bank 更名而来
+# 从旧版本升级：挂载目录不变（./data 与 ./pets 直接复用，数据库会自动从 money-jar.db 改名为 shell-town.db）
+# 旧容器可清理：docker rm -f piggy-bank
+services:
+  shell-town:
+    build: .
+    image: shell-town:latest
+    container_name: shell-town
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+      # 宠物立绘目录映射到宿主机：加图/换图后刷新页面即可生效，无需重启容器或重建镜像
+      # 注意：挂载点是构建产物 web/dist/pets（public 只是 Vite 源码目录，构建时拷入 dist）
+      # 首次挂载无需手动拷贝：容器启动时会把镜像内置的出厂素材（/app/pets-default）
+      # 自动补齐到 ./pets —— 只补缺失文件，不覆盖你改过或家长端上传的图
+      - ./pets:/app/web/dist/pets
+    environment:
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin123}
+      # JWT 签名密钥：所有登录令牌（家长/小孩）的签发与校验都用它。
+      # 务必用随机串；改动后所有人需重新登录（不影响任何数据）。
+      # 建议写在同目录 .env：JWT_SECRET=你的随机串（生成：openssl rand -hex 32）
+      - JWT_SECRET=${JWT_SECRET:-please-change-this-secret-in-production}
+      - PORT=3000
+      - DATA_DIR=/app/data

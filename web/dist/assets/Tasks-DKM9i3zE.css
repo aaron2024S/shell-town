@@ -1,0 +1,280 @@
+
+.form[data-v-e3e8bed4] { display: flex; flex-direction: column; gap: 18px;
+}
+.field[data-v-e3e8bed4] { display: flex; flex-direction: column; gap: 8px;
+}
+.label[data-v-e3e8bed4] { font-size: 13px; color: var(--text-secondary); padding-left: 4px; display: flex; align-items: center; gap: 6px;
+}
+.hint[data-v-e3e8bed4] { font-size: 11px; color: var(--text-muted); padding-left: 4px; line-height: 1.5;
+}
+.checkbox[data-v-e3e8bed4] { width: auto;
+}
+textarea[data-v-e3e8bed4] { resize: vertical; min-height: 60px; font-family: inherit;
+}
+.child-grid[data-v-e3e8bed4] {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.child-chip[data-v-e3e8bed4] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 4px;
+  border-radius: var(--r-md);
+  background: var(--glass-bg);
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+.child-chip span[data-v-e3e8bed4] { font-size: 12px; font-family: var(--font-cute);
+}
+.child-chip.active[data-v-e3e8bed4] {
+  border-color: var(--accent-yellow);
+  background: rgba(255, 209, 102, 0.15);
+}
+.child-chip .check[data-v-e3e8bed4] {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  color: var(--accent-yellow);
+  font-size: 14px;
+  font-weight: bold;
+}
+.deadline-row[data-v-e3e8bed4] { display: flex; gap: 8px;
+}
+.date-input[data-v-e3e8bed4], .time-input[data-v-e3e8bed4] { flex: 1;
+}
+
+.form[data-v-76bb0dbc] { display: flex; flex-direction: column; gap: 18px;
+}
+.field[data-v-76bb0dbc] { display: flex; flex-direction: column; gap: 8px;
+}
+.label[data-v-76bb0dbc] { font-size: 13px; color: var(--text-secondary); padding-left: 4px;
+}
+.hint[data-v-76bb0dbc] { font-size: 11px; color: var(--text-muted); padding-left: 4px;
+}
+textarea[data-v-76bb0dbc] { resize: vertical; min-height: 60px; font-family: inherit;
+}
+.child-grid[data-v-76bb0dbc] { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+}
+.child-chip[data-v-76bb0dbc] {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 10px 4px; border-radius: var(--r-md);
+  background: var(--glass-bg); border: 2px solid transparent;
+  transition: all 0.2s; position: relative; cursor: pointer;
+}
+.child-chip span[data-v-76bb0dbc] { font-size: 12px; font-family: var(--font-cute);
+}
+.child-chip.active[data-v-76bb0dbc] { border-color: var(--accent-yellow); background: rgba(255, 209, 102, 0.15);
+}
+.child-chip .check[data-v-76bb0dbc] { position: absolute; top: 4px; right: 6px; color: var(--accent-yellow); font-size: 14px; font-weight: bold;
+}
+.freq-row[data-v-76bb0dbc] { display: flex; gap: 8px;
+}
+.freq-btn[data-v-76bb0dbc] {
+  flex: 1; padding: 10px; border-radius: var(--r-sm);
+  background: var(--glass-bg); color: var(--text-secondary); font-weight: 600;
+  border: 1px solid transparent;   /* 占位：选中态换色时不产生 2px 高度跳动 */
+  transition: all 0.2s;
+}
+/* 选中态：实心暖黄渐变 + 深色文字。
+   此前是「淡黄底 + --accent-yellow 文字」—— 同一个 #ffd166 既当背景又当文字色，
+   叠在白色玻璃上两者亮度几乎相同（对比度约 1.4:1），标签基本看不见。
+   改成实心渐变 + var(--text-primary) 后对比度 ≥ 5:1，
+   且与全局的 .btn-primary / .btn-success 是同一套「渐变底 + 深色字」语言。 */
+.freq-btn.active[data-v-76bb0dbc] {
+  background: linear-gradient(135deg, var(--accent-yellow), var(--accent-orange));
+  color: var(--text-primary);
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(255, 180, 84, 0.35);
+}
+.time-row[data-v-76bb0dbc] { display: flex; align-items: center; gap: 10px;
+}
+.time-input[data-v-76bb0dbc] {
+  width: 130px; padding: 8px 10px; border-radius: var(--r-sm);
+  background: var(--glass-bg); border: 1px solid var(--glass-border);
+  color: var(--text-primary); font-size: 15px; font-family: var(--font-cute);
+}
+.time-hint[data-v-76bb0dbc] { font-size: 12px; color: var(--text-secondary);
+}
+.pick-row[data-v-76bb0dbc] { display: flex; gap: 6px; flex-wrap: wrap;
+}
+.pick-row.wrap[data-v-76bb0dbc] { max-height: 120px; overflow-y: auto;
+}
+.pick-chip[data-v-76bb0dbc] {
+  padding: 8px 12px; border-radius: 999px; font-size: 12px;
+  background: var(--glass-bg); color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.pick-chip.mini[data-v-76bb0dbc] { padding: 6px 0; width: 38px; text-align: center;
+}
+/* 同一个毛病的另一处：淡薄荷底 + --accent-mint 文字。改用与 .btn-success
+   完全一致的「薄荷→天蓝 渐变 + 深色字」，选中态一眼可见。 */
+.pick-chip.active[data-v-76bb0dbc] {
+  background: linear-gradient(135deg, var(--accent-mint), var(--accent-sky));
+  color: #1a1a2e;
+  font-weight: 700;
+}
+
+.page-header[data-v-dc1ae8ee] {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+.title[data-v-dc1ae8ee] { font-size: 26px; margin-bottom: 2px;
+}
+.subtitle[data-v-dc1ae8ee] { color: var(--text-secondary); font-size: 13px;
+}
+.header-btns[data-v-dc1ae8ee] { display: flex; gap: 8px;
+}
+.rules-section[data-v-dc1ae8ee] { margin-bottom: 18px; display: flex; flex-direction: column; gap: 8px;
+}
+.rules-head[data-v-dc1ae8ee] { font-size: 13px; color: var(--text-secondary); font-family: var(--font-cute); padding-left: 4px;
+}
+.rule-card[data-v-dc1ae8ee] { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.rule-main[data-v-dc1ae8ee] { display: flex; align-items: center; gap: 10px; min-width: 0;
+}
+.rule-avatars[data-v-dc1ae8ee] { display: flex; flex-shrink: 0;
+}
+.rule-avatars[data-v-dc1ae8ee] >  * { margin-left: -8px;
+}
+.rule-avatars[data-v-dc1ae8ee] >  *:first-child { margin-left: 0;
+}
+.rule-info[data-v-dc1ae8ee] { min-width: 0;
+}
+.rule-name[data-v-dc1ae8ee] { font-size: 15px; font-family: var(--font-cute); display: flex; align-items: center; gap: 6px;
+}
+.rule-meta[data-v-dc1ae8ee] { font-size: 12px; color: var(--text-muted); margin-top: 2px;
+}
+.rule-badge[data-v-dc1ae8ee] { font-size: 10px; padding: 1px 8px; border-radius: 8px; font-weight: 600;
+}
+.rule-badge.off[data-v-dc1ae8ee] { background: rgba(160, 160, 160, 0.2); color: var(--text-muted);
+}
+.rule-badge.due[data-v-dc1ae8ee] { background: rgba(255, 209, 102, 0.2); color: var(--accent-yellow);
+}
+.rule-actions[data-v-dc1ae8ee] { display: flex; gap: 6px; flex-wrap: wrap;
+}
+.tabs[data-v-dc1ae8ee] {
+  display: flex;
+  background: var(--glass-bg);
+  border-radius: var(--r-md);
+  padding: 4px;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.tabs button[data-v-dc1ae8ee] {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--r-sm);
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.tabs button.active[data-v-dc1ae8ee] {
+  background: var(--glass-bg-strong);
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.task-list[data-v-dc1ae8ee] { display: flex; flex-direction: column; gap: 12px;
+}
+.task-card[data-v-dc1ae8ee] { transition: transform 0.15s;
+}
+.task-head[data-v-dc1ae8ee] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.user-info[data-v-dc1ae8ee] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.user-name[data-v-dc1ae8ee] {
+  font-family: var(--font-cute);
+  font-size: 14px;
+}
+.status-badge[data-v-dc1ae8ee] {
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(126, 212, 185, 0.2);
+  color: var(--accent-mint);
+}
+.status-badge.expired[data-v-dc1ae8ee] { background: rgba(255, 122, 122, 0.2); color: var(--accent-red);
+}
+.status-badge.completed[data-v-dc1ae8ee] { background: rgba(126, 212, 185, 0.3); color: var(--accent-mint);
+}
+.status-badge.pending[data-v-dc1ae8ee] { background: rgba(255, 209, 102, 0.2); color: var(--accent-yellow);
+}
+.status-badge.rejected[data-v-dc1ae8ee] { background: rgba(255, 122, 122, 0.2); color: var(--accent-red);
+}
+.points-tag[data-v-dc1ae8ee] {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 209, 102, 0.28), rgba(255, 209, 102, 0.12));
+  border: 1px solid rgba(255, 209, 102, 0.45);
+  box-shadow: 0 2px 8px rgba(255, 209, 102, 0.15);
+  font-family: var(--font-cute);
+  color: var(--accent-yellow);
+  font-size: 17px;
+  white-space: nowrap;
+}
+.task-name[data-v-dc1ae8ee] {
+  font-size: 18px;
+  margin-bottom: 4px;
+  font-family: var(--font-cute);
+}
+.task-desc[data-v-dc1ae8ee] {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.task-meta[data-v-dc1ae8ee] {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.rejected-box[data-v-dc1ae8ee] {
+  font-size: 12px;
+  color: var(--accent-red);
+  background: rgba(255, 122, 122, 0.1);
+  padding: 6px 10px;
+  border-radius: var(--r-sm);
+  margin-bottom: 8px;
+}
+.actions[data-v-dc1ae8ee] {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.small[data-v-dc1ae8ee] {
+  padding: 6px 14px;
+  font-size: 13px;
+}
+.danger[data-v-dc1ae8ee]:hover {
+  color: var(--accent-red);
+}
+.done-text[data-v-dc1ae8ee] {
+  font-size: 13px;
+  color: var(--accent-mint);
+  font-family: var(--font-cute);
+}
+@media (max-width: 768px) {
+.page-header[data-v-dc1ae8ee] { flex-direction: column; align-items: stretch;
+}
+}

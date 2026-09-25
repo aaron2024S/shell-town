@@ -1,0 +1,11 @@
+
+.cat-icon[data-v-6cb2b967] {
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+svg[data-v-6cb2b967] { display: block;
+}

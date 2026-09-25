@@ -1,0 +1,16 @@
+
+.glass-card[data-v-3a6ccfbb] {
+  position: relative;
+  overflow: hidden;
+}
+.hoverable[data-v-3a6ccfbb] {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.hoverable[data-v-3a6ccfbb]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+.hoverable[data-v-3a6ccfbb]:active {
+  transform: translateY(0) scale(0.99);
+}

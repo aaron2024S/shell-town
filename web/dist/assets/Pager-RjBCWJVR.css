@@ -1,0 +1,33 @@
+
+.pager[data-v-dd42e330] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+.pg-btn[data-v-dd42e330] {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  color: var(--text-secondary);
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.pg-btn[data-v-dd42e330]:not(:disabled):hover {
+  background: var(--glass-bg-strong);
+  color: var(--text-primary);
+}
+.pg-btn[data-v-dd42e330]:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.pg-info[data-v-dd42e330] {
+  font-size: 12px;
+  color: var(--text-muted);
+}

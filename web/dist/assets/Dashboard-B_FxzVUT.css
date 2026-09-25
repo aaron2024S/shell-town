@@ -1,0 +1,489 @@
+
+.form[data-v-b49ab6fa] {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.field[data-v-b49ab6fa] {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.label[data-v-b49ab6fa] {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding-left: 4px;
+}
+.hint[data-v-b49ab6fa] {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding-left: 4px;
+}
+.avatar-row[data-v-b49ab6fa] {
+  display: flex;
+  gap: 12px;
+}
+
+/* 性别选择：两枚等宽按钮，沿用头像选择的视觉语言 */
+.gender-row[data-v-b49ab6fa] {
+  display: flex;
+  gap: 12px;
+}
+.gender-btn[data-v-b49ab6fa] {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 10px;
+  border-radius: var(--r-sm);
+  background: var(--glass-bg);
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.gender-btn[data-v-b49ab6fa]:hover {
+  background: var(--glass-bg-strong);
+}
+.gender-btn.active[data-v-b49ab6fa] {
+  background: var(--glass-bg-strong);
+  border-color: var(--accent-orange);
+}
+.g-ico[data-v-b49ab6fa] {
+  font-size: 18px;
+  line-height: 1;
+  color: var(--accent-orange);
+}
+.g-name[data-v-b49ab6fa] {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.zodiac[data-v-b49ab6fa] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 6px;
+  border-radius: var(--r-sm);
+  background: var(--glass-bg);
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.zodiac[data-v-b49ab6fa]:hover {
+  background: var(--glass-bg-strong);
+}
+.zodiac.active[data-v-b49ab6fa] {
+  background: var(--glass-bg-strong);
+  border-color: var(--accent-orange);
+}
+.zname[data-v-b49ab6fa] {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+.custom-ico[data-v-b49ab6fa] {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  line-height: 1;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 2px dashed var(--glass-border);
+}
+
+.loading[data-v-ed8062cd] {
+  padding: 30px 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+.account-list[data-v-ed8062cd] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.account-item[data-v-ed8062cd] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+}
+.info[data-v-ed8062cd] {
+  flex: 1;
+  min-width: 0;
+}
+.name[data-v-ed8062cd] {
+  font-size: 15px;
+  font-family: var(--font-cute);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 性别小标签：一眼看出谁被设成了男生（蓝底主题） */
+.gtag[data-v-ed8062cd] {
+  font-size: 10px;
+  font-family: var(--font-body);
+  padding: 1px 6px;
+  border-radius: 6px;
+  margin-left: 6px;
+  vertical-align: 1px;
+}
+.gtag.boy[data-v-ed8062cd] {
+  background: rgba(132, 197, 255, 0.22);
+  color: #3a7bbf;
+}
+.gtag.girl[data-v-ed8062cd] {
+  background: rgba(255, 155, 176, 0.22);
+  color: #c9527a;
+}
+.points[data-v-ed8062cd] {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.actions[data-v-ed8062cd] {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.icon-btn[data-v-ed8062cd] {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-sm);
+  background: var(--glass-bg-strong);
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.icon-btn[data-v-ed8062cd]:hover {
+  transform: scale(1.08);
+}
+.icon-btn.del[data-v-ed8062cd]:hover {
+  background: rgba(255, 107, 107, 0.18);
+}
+.add-btn[data-v-ed8062cd] {
+  width: 100%;
+}
+
+.page-header[data-v-fd2c4704] {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+.title[data-v-fd2c4704] { font-size: 26px; margin-bottom: 2px;
+}
+.subtitle[data-v-fd2c4704] { color: var(--text-secondary); font-size: 13px;
+}
+.today-summary[data-v-fd2c4704] {
+  margin-bottom: 24px;
+}
+.summary-grid[data-v-fd2c4704] {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.summary-item[data-v-fd2c4704] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.summary-item .label[data-v-fd2c4704] {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.summary-item .value[data-v-fd2c4704] {
+  font-size: 22px;
+  font-family: var(--font-cute);
+}
+.gain[data-v-fd2c4704] { color: var(--accent-mint);
+}
+.loss[data-v-fd2c4704] { color: var(--accent-pink);
+}
+.divider[data-v-fd2c4704] {
+  width: 1px;
+  height: 32px;
+  background: var(--glass-border);
+}
+.loading[data-v-fd2c4704] {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.skeleton-card[data-v-fd2c4704] {
+  height: 88px;
+  border-radius: var(--r-lg);
+  background: var(--glass-bg);
+  animation: pulse-fd2c4704 1.5s ease-in-out infinite;
+}
+@keyframes pulse-fd2c4704 {
+0%, 100% { opacity: 0.5;
+}
+50% { opacity: 0.8;
+}
+}
+.rank-list[data-v-fd2c4704] {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.rank-card[data-v-fd2c4704] {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.info[data-v-fd2c4704] { flex: 1;
+}
+.name[data-v-fd2c4704] { font-size: 17px; font-family: var(--font-cute);
+}
+.meta[data-v-fd2c4704] { font-size: 12px; color: var(--text-muted); margin-top: 2px;
+}
+.today-points[data-v-fd2c4704] {
+  color: var(--accent-mint);
+  font-family: var(--font-cute);
+  font-size: 14px;
+}
+.points[data-v-fd2c4704] {
+  text-align: right;
+}
+.points .num[data-v-fd2c4704] {
+  font-size: 26px;
+  font-family: var(--font-cute);
+  color: var(--accent-yellow);
+}
+.points .unit[data-v-fd2c4704] {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-left: 2px;
+}
+
+/* 积分记录弹窗 */
+.logs-list[data-v-fd2c4704] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.log-item[data-v-fd2c4704] {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+}
+.log-delta[data-v-fd2c4704] {
+  font-size: 20px;
+  font-family: var(--font-cute);
+  flex-shrink: 0;
+  min-width: 72px;
+  text-align: right;
+}
+.log-delta.gain[data-v-fd2c4704] { color: var(--accent-mint);
+}
+.log-delta.loss[data-v-fd2c4704] { color: var(--accent-pink);
+}
+.log-body[data-v-fd2c4704] {
+  flex: 1;
+  min-width: 0;
+}
+.log-note[data-v-fd2c4704] {
+  font-size: 14px;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.log-source[data-v-fd2c4704] {
+  margin-right: 4px;
+  opacity: 0.8;
+}
+.log-time[data-v-fd2c4704] {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.logs-loading[data-v-fd2c4704], .logs-empty[data-v-fd2c4704] {
+  padding: 30px 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* 孩子卡片上的宠物缩略 */
+.pet-chip[data-v-fd2c4704] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 3px 10px 3px 4px;
+  border-radius: 999px;
+  background: rgba(126, 212, 185, 0.16);
+  transition: background 0.15s;
+}
+.pet-chip[data-v-fd2c4704]:hover { background: rgba(126, 212, 185, 0.28);
+}
+.pet-chip.none[data-v-fd2c4704] { background: var(--glass-bg);
+}
+.pet-egg[data-v-fd2c4704] { font-size: 20px; line-height: 1; padding: 0 4px;
+}
+.pet-lv[data-v-fd2c4704] {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-family: var(--font-cute);
+}
+/* 加载失败态：用警示色区别于"真的未领养"，避免家长误判宠物丢失 */
+.pet-lv-fail[data-v-fd2c4704] { color: var(--danger);
+}
+.pet-go[data-v-fd2c4704] { font-size: 10px; color: var(--accent-orange);
+}
+
+/* 宠物详情弹窗 */
+.pet-empty[data-v-fd2c4704] {
+  text-align: center;
+  padding: 20px 0 10px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+.pet-empty .pe-emoji[data-v-fd2c4704] { font-size: 44px; display: block; margin-bottom: 8px;
+}
+.pet-empty .pe-hint[data-v-fd2c4704] { font-size: 12px; color: var(--text-muted); margin-top: 4px;
+}
+.pet-detail[data-v-fd2c4704] { display: flex; flex-direction: column; gap: 14px;
+}
+.pd-head[data-v-fd2c4704] {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border-radius: var(--r-lg);
+  background: linear-gradient(135deg, rgba(126, 212, 185, 0.16), rgba(255, 209, 102, 0.12));
+}
+.pd-info[data-v-fd2c4704] { flex: 1; min-width: 0;
+}
+.pd-name[data-v-fd2c4704] { font-family: var(--font-cute); font-size: 19px; margin-bottom: 6px;
+}
+.pd-tags[data-v-fd2c4704] { display: flex; gap: 6px; flex-wrap: wrap;
+}
+.pd-tag[data-v-fd2c4704] {
+  font-size: 11px;
+  padding: 2px 9px;
+  border-radius: 10px;
+  background: var(--glass-bg-strong);
+  color: var(--text-secondary);
+}
+.pd-tag.lv[data-v-fd2c4704] {
+  background: linear-gradient(135deg, var(--accent-yellow), var(--accent-orange));
+  color: #4a2e00;
+  font-family: var(--font-cute);
+}
+.pd-exp[data-v-fd2c4704] { font-size: 11px; color: var(--text-muted); margin-top: 8px;
+}
+.pd-stats[data-v-fd2c4704] { display: flex; flex-direction: column; gap: 8px;
+}
+.pds-head[data-v-fd2c4704] {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.pds-num[data-v-fd2c4704] { font-family: var(--font-cute);
+}
+.pds-bar[data-v-fd2c4704] {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(90, 58, 74, 0.1);
+  overflow: hidden;
+}
+.pds-fill[data-v-fd2c4704] { height: 100%; border-radius: 999px;
+}
+.pd-mood[data-v-fd2c4704] {
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 9px 12px;
+  border-radius: var(--r-sm);
+  background: var(--glass-bg);
+  line-height: 1.5;
+}
+.pd-spent[data-v-fd2c4704] { font-size: 11px; color: var(--text-muted);
+}
+
+/* 每日用量与限额 */
+.pd-quota[data-v-fd2c4704] {
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: var(--glass-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pdq-usage[data-v-fd2c4704] {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.pdq-usage b[data-v-fd2c4704] { font-family: var(--font-cute); color: var(--accent-orange);
+}
+.pdq-edit[data-v-fd2c4704] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.pdq-edit input[data-v-fd2c4704] {
+  width: 56px;
+  padding: 4px 6px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 13px;
+}
+.pdq-save[data-v-fd2c4704] {
+  margin-left: auto;
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: var(--accent-mint);
+  color: #fff;
+  font-size: 12px;
+}
+.pdq-save[data-v-fd2c4704]:disabled { opacity: 0.6;
+}
+.pdq-hint[data-v-fd2c4704] { font-size: 11px; color: var(--text-muted);
+}
+.pdq-warn[data-v-fd2c4704] { color: #d97706; font-weight: 600;
+}
+.pd-logs-title[data-v-fd2c4704] {
+  font-family: var(--font-cute);
+  font-size: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--glass-border);
+}
+.pd-reset[data-v-fd2c4704] {
+  align-self: flex-start;
+  font-size: 11px;
+  color: var(--danger);
+  opacity: 0.75;
+  padding: 4px 0;
+}
+.pd-reset[data-v-fd2c4704]:hover { opacity: 1; text-decoration: underline;
+}

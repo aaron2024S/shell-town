@@ -1,0 +1,53 @@
+# 统一让仓库里存的行尾是 LF。
+#
+# 为什么必须加这一条：Windows 上 git 默认 core.autocrlf=true，会把 .sh 检出成 CRLF，
+# 而容器里 `ENTRYPOINT ["sh", "docker-entrypoint.sh"]` 直接执行脚本 ——
+# CRLF 会让 sh 报 `bad interpreter: /bin/sh^M`，容器起不来。
+# 声明 eol=lf 后，仓库里和检出的都固定是 LF，彻底断掉这个坑。
+* text=auto eol=lf
+
+# 明确的文本类型
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.js    text eol=lf
+*.mjs   text eol=lf
+*.cjs   text eol=lf
+*.vue   text eol=lf
+*.css   text eol=lf
+*.html  text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.sql   text eol=lf
+*.sh    text eol=lf
+
+# Windows 脚本保持 CRLF
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+
+# 二进制：明确声明，避免 git 去做行尾转换而损坏文件
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.bmp   binary
+*.svg   text eol=lf
+*.mp3   binary
+*.wav   binary
+*.ogg   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.eot   binary
+*.zip   binary
+*.gz    binary
+*.tar   binary
+*.db    binary
+
+# 让 GitHub 语言统计准确：这些是产物/素材，不算项目语言
+web/dist/** linguist-generated=true
+package-lock.json linguist-generated=true
