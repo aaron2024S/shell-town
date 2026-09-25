@@ -1,5 +1,10 @@
 # ============================================================================
-# Shell Town（拾贝小镇）—— 构建多架构（amd64 + arm64）镜像并推送到 Docker Hub
+# Shell Town（拾贝小镇）—— 构建 x86_64（linux/amd64）镜像并推送到 Docker Hub
+#
+#   为什么只有 amd64：本应用只在 Intel/AMD 的 NAS 上用。
+#   单架构不需要 QEMU 模拟，构建更快，也避开了 arm64 特有的原生编译问题。
+#   将来真要 arm64，把 platforms 加回「,linux/arm64」并恢复 QEMU 步骤即可
+#   （注意：better-sqlite3 在 musl+arm64 下没有预编译包，会现场编 SQLite，很慢）。
 #
 # 怎么用（只在需要出新镜像时才跑，不会自动乱跑）：
 #   GitHub 仓库页 → Actions → 左侧选「docker-build-push」
@@ -11,11 +16,10 @@
 #     DOCKERHUB_TOKEN    = Docker Hub 访问令牌（不是登录密码）
 #   必须建在 Secrets 分页，建在旁边的 Variables 分页等于没建。
 #
-# 这个项目构建较慢：better-sqlite3 是 native 模块，alpine(musl)+arm64 没有现成预编译包，
-# 必须在容器里用 g++ 现场编译整个 SQLite 源码（约 25 万行 C）；
-# 再叠加 arm64 的 QEMU 软件模拟（编译速度约原生的 1/5~1/10）和首次无缓存，
-# 第一次双架构预计 30~45 分钟，属正常。跑完会留下 GitHub 缓存，之后会明显变快。
-# 想快：不确定 NAS 架构就留着；确定是 x86 就删掉 QEMU 这一步 + platforms 只留 linux/amd64。
+# 本项目构建偏慢的原因：better-sqlite3 是 native 模块，alpine(musl) 下没有现成预编译包，
+# 必须在容器里用 g++ 现场编译整个 SQLite 源码（约 25 万行 C）。
+# 但因为是单架构（x86 构建机造 x86 镜像），**全程不经过 QEMU**，这一步就是原生速度。
+# 首次无缓存预计 8~15 分钟；跑完会留下 GitHub 缓存，之后会明显变快。
 # ============================================================================
 name: docker-build-push
 
@@ -45,11 +49,7 @@ jobs:
       - name: 拉取代码
         uses: actions/checkout@v7
 
-      # 只想要 x86（NAS 是 Intel/AMD）的话：删掉这一步，并把下面 platforms 里的
-      #「,linux/arm64」去掉，构建能快一大截
-      - name: 准备 QEMU（构建 arm64 用）
-        uses: docker/setup-qemu-action@v4
-
+      # 只构建 x86，因此**不需要 QEMU**（已移除 setup-qemu 步骤）。
       - name: 准备 Buildx
         uses: docker/setup-buildx-action@v4
 
@@ -65,7 +65,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           # 手动触发时用你填的标签；若改用 tag 触发，则自动用 tag 名
           tags: ${{ env.DOCKERHUB_USER }}/${{ env.IMAGE_NAME }}:${{ inputs.tag || github.ref_name }}
@@ -78,6 +78,6 @@ jobs:
           echo "### 镜像已推送" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "- 名称：\`$DOCKERHUB_USER/$IMAGE_NAME:${{ inputs.tag || github.ref_name }}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "- 架构：\`linux/amd64, linux/arm64\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- 架构：\`linux/amd64\`" >> "$GITHUB_STEP_SUMMARY"
           echo "- 摘要：\`${{ steps.build.outputs.digest }}\`" >> "$GITHUB_STEP_SUMMARY"
           echo "- 拉取：\`docker pull $DOCKERHUB_USER/$IMAGE_NAME:${{ inputs.tag || github.ref_name }}\`" >> "$GITHUB_STEP_SUMMARY"
